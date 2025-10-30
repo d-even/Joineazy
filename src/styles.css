@@ -1,0 +1,88 @@
+@tailwindcss base;
+@tailwindcss components;       
+@tailwindcss utilities;
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-600: #1d4ed8;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --glass: rgba(15, 23, 42, 0.04);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#0f172a;-webkit-font-smoothing:antialiased}
+
+.app-root{min-height:100vh;padding:28px 20px}
+.container{max-width:1120px;margin:0 auto}
+
+.app-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px;gap:16px}
+.app-header h1{margin:0;font-size:20px}
+.muted{color:var(--muted)}
+.small{font-size:12px}
+.strong{font-weight:600}
+
+.app-header .brand{display:flex;flex-direction:column}
+.app-header .brand .title{font-weight:700;font-size:18px}
+.app-header .brand .subtitle{font-size:13px;color:var(--muted)}
+
+.app-header select{padding:8px 10px;border-radius:8px;border:1px solid rgba(2,6,23,0.06);background:#fff}
+
+.grid{display:grid;grid-template-columns:1fr 320px;gap:22px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.main-col{min-width:0}
+.side-col{position:relative}
+
+.card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 30px var(--glass);margin-bottom:14px}
+.stack > * + *{margin-top:14px}
+
+/* Assignment card layout */
+.card-main{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.card-title{margin:0 0 6px 0;font-size:16px}
+.card .muted{margin:0}
+.card-status{min-width:150px;text-align:right}
+.status-text{font-weight:700}
+.card-actions{display:flex;justify-content:flex-end;margin-top:12px}
+
+/* progress bar */
+.pb-root{width:100%}
+.pb-track{background:linear-gradient(180deg,#eef2ff,#f8fafc);height:12px;border-radius:999px;overflow:hidden;border:1px solid rgba(2,6,23,0.04)}
+.pb-fill{background:linear-gradient(90deg,var(--accent),var(--accent-600));height:100%;width:0;transition:width 420ms cubic-bezier(.2,.9,.3,1)}
+
+/* admin student grid */
+.student-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+@media(min-width:600px){.student-grid{grid-template-columns:1fr 1fr}}
+.student-row{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:10px;border:1px solid #eef2f7;background:#fbfdff}
+.student-name{font-size:14px}
+.student-actions{display:flex;align-items:center;gap:10px}
+.tiny{font-size:12px;color:var(--muted)}
+
+/* buttons */
+.btn{background:#fff;border:1px solid #e6eef8;padding:8px 12px;border-radius:10px;cursor:pointer}
+.btn-primary{background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:10px;cursor:pointer;box-shadow:0 6px 18px rgba(37,99,235,0.12)}
+.btn-primary:hover{background:var(--accent-600)}
+.btn-ghost{background:transparent;border:1px solid rgba(2,6,23,0.06)}
+.btn-warning{background:#fff4e5;border:1px solid #f59e0b;padding:8px 10px;border-radius:8px}
+.tiny-btn{padding:6px 8px;border-radius:8px;border:none;cursor:pointer}
+.tiny-btn-success{background:#ecfdf5;color:var(--success);border:1px solid rgba(16,185,129,0.12)}
+.tiny-btn-danger{background:#fff1f2;color:var(--danger);border:1px solid rgba(220,38,38,0.08)}
+
+/* form */
+.form-row{margin-bottom:12px}
+.label{display:block;font-size:13px;margin-bottom:8px}
+.input{width:100%;padding:10px;border-radius:10px;border:1px solid #eef2f7;background:#fbfdff}
+.checkbox-list{display:flex;flex-direction:column;gap:8px}
+.checkbox-item{font-size:14px}
+.form-actions{text-align:right}
+
+.link{color:var(--accent);text-decoration:underline}
+
+/* subtle hover */
+.card:hover{transform:translateY(-3px);transition:transform 200ms ease}
+
+/* responsive tweaks */
+@media(max-width:600px){.app-header{flex-direction:column;align-items:flex-start;gap:10px}.card{padding:12px}}

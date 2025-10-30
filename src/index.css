@@ -1,0 +1,15 @@
+
+html, body, #root { height: 100%; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #f6f8fb; color: #0f172a; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+
+
+a { color: inherit; }
+button { font: inherit; }
+input, select, textarea { font: inherit; }
+
+
+.muted{ color:#6b7280; }
+.small{ font-size:12px; }
+.link{ color:#2563eb; text-decoration:underline; }
+
