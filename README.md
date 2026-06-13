@@ -1,6 +1,6 @@
 # Joisy Dashboard
 
-A lightweight, client-only React dashboard for creating assignments and tracking student submissions. Supports two roles (admin and student) and persists data locally via `localStorage`. Built with Create React App.
+A lightweight, client-only React dashboard for creating assignments and tracking student submissions. Supports two roles (admin and student) and persists data locally via MySql. Built with Create React App.
 
 ## Project Setup Instructions
 
