@@ -262,6 +262,7 @@ App (Root)
 ## Tech Stack
 
 - **React 19** - UI library
+- **Database** - MySQL
 - **Create React App** - Build tooling and development server
 - **React Scripts 5.0.1** - Build configuration
 - **CSS** - Custom styling (no CSS frameworks)
